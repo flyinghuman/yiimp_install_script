@@ -25,7 +25,7 @@ clear
 output "Make sure you double check before hitting enter! Only one shot at these!"
 output ""
     read -e -p "Enter time zone (e.g. America/New_York) : " TIME
-#    read -e -p "Server name (no http:// or www. just example.com) : " server_name
+    read -e -p "Server name (no http:// or www. just example.com) : " server_name
     read -e -p "Are you using a subdomain (pool.example.com?) [y/N] : " sub_domain
     read -e -p "Enter support email (e.g. admin@example.com) : " EMAIL
     read -e -p "Set stratum to AutoExchange? i.e. mine any coinf with BTC address? [y/N] : " BTC
@@ -711,6 +711,7 @@ define('"'"'EXCH_YOBIT_SECRET'"'"', '"'"''"'"');
      sudo mysql --defaults-group-suffix=host1 --force < 2017-10-bookmarks.sql
      sudo mysql --defaults-group-suffix=host1 --force < 2017-11-segwit.sql
      sudo mysql --defaults-group-suffix=host1 --force < 2018-01-stratums_ports.sql
+     sudo mysql --defaults-group-suffix=host1 --force < 2018-02-coins_getinfo.sql
      
     clear
     output "Generating a basic serverconfig.php"
